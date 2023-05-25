@@ -1,0 +1,100 @@
+html,body
+{
+    margin: 0 auto;
+}
+.navbar
+{
+    background-image: url('Image Folder/ckt.png');
+    background-size: cover;
+   /* background-color: rgb(58, 209, 121); */
+   /* height: 70px;
+   width: 100%; */
+   /* margin: 0 auto; */
+   /* position: absolute; */
+   /* display: flex;
+   justify-content: space-between; */
+}
+
+.logo img
+{
+    /* width: 100px;
+    height: 100px;
+    /* position: center center;
+    left: 0; */
+    position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 300px;
+        height: 100px;
+        text-align: center;
+} 
+
+.login 
+{
+    height: 80px;
+}
+
+.login img 
+{
+    height: 50%;
+    position: relative;
+    right: 0;
+}
+
+.AboutUs
+{
+        background-color: #efeff0;
+}
+.WhoWeAre
+{
+    padding-top: 40px;
+        display: flex;
+            align-items: center;
+            justify-content: space-around;
+            /* height: 100vh; */
+        /* position: center center; */
+        /* left: 100; */
+} 
+.WhoWeArePic, .WhoWeAreText 
+{
+    width: 40%;
+}
+
+.WhoWeArePic  img
+{
+    width: 110%;
+}
+
+.Product
+{
+        background-color: #efeff0;
+    /* position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); */
+        text-align: center;
+}
+
+.Contactinfo
+{
+    background-color: #a3a3a3;
+            text-align: center;
+}
+
+.Overview
+{
+    background-color: rgb(255, 254, 254);
+        padding-top: 40px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-around;
+}
+
+
+.look
+{
+        background-color: rgb(241, 240, 240);
+                text-align: center;
+}

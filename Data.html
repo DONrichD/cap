@@ -1,0 +1,67 @@
+<html>
+   <head>
+      <title>The jQuery Example</title>
+      <script type="text/javascript" src="jquery-3.4.1.min.js"></script>
+      <script type="text/javascript">
+
+         $(document).ready(function() {
+			
+            //setTimeout(function(){update()}, 5000);
+            setInterval(function(){update()}, 5000);
+         });
+
+         function update()
+         {
+              num1 = Math.floor(Math.random()*100);
+
+              $.post( 
+					 'get-latest-data.php',
+					 {api_key: "tPmAT5Ab3j7F9"},
+					 function(data,stat){
+						 jd = JSON.parse(data);
+						 document.getElementById("Voltage").value = jd.value1;
+						 document.getElementById("Current").value = jd.value2;
+						 document.getElementById("Energy").value = jd.value3;	      
+                         document.getElementById("Power Factor").value = jd.value4;	 
+						 document.getElementById("created_at").value = jd.readtime;	      
+					}
+				);  
+         }
+      </script>
+   </head>
+	
+   <body>
+       <center><h1>Data</h1></center>
+      <p></p>
+        
+      <form id = "testform">
+         <table>
+
+            <tr>
+               <td><p>Voltage:</p></td>
+               <td><input type = "text" id = "Voltage" size = "20" readonly /></td>
+            </tr>
+				
+            <tr>
+               <td><p>Current:</p></td>
+               <td><input type = "text" id = "Current" size = "20" readonly /></td>
+            </tr>
+            <tr>
+               <td><p>Energy:</p></td>
+               <td><input type = "text" id = "Energy" size = "20" readonly /></td>
+            </tr>
+                        <tr>
+                            <td>
+                                <p>Power Factor:</p>
+                            </td>
+                            <td><input type="text" id="Power Factor" size="20" readonly /></td>
+                        </tr>
+            <tr>
+               <td><p>Time Acquired:</p></td>
+               <td><input type = "text" id = "created_at" size = "20" readonly /></td>
+            </tr>
+            
+         </table>
+      </form>
+   </body>
+</html>
